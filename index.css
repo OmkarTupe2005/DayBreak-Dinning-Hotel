@@ -1,0 +1,193 @@
+.hero-section {
+    background-image: url('123.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* Hero Section Styles */
+
+
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation for Background Image */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    z-index: 1;
+    transition: transform 5s ease;
+}
+
+/* On hover, apply a zoom-in effect to the background image */
+.hero-section:hover::before {
+    transform: scale(1.2);
+}
+
+/* Responsive Image Styling */
+.custom-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-image:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* General Styles for the Gallery Section */
+.gallery-section {
+    background-color: #f8f9fa;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.gallery-section p {
+    color: #6c757d;
+}
+
+/* Ensure Equal Image Size for All Cards */
+.gallery-card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px; /* Set equal height for all cards */
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the card */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while filling the card */
+}
+
+/* Zoom the Card on Hover */
+.gallery-card:hover {
+    transform: scale(1.05); /* Zoom the entire card */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-card {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer p, footer a {
+    margin-bottom: 0;
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff9800;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    footer .text-md-end {
+        text-align: center;
+    }
+}
+
+.footer {
+    background-color: #f8f9fa;
+    transition: background-color 0.5s ease;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+.social-icon {
+    width: 30px; /* Set a fixed width for the icons */
+    height: 30px; /* Set a fixed height for the icons */
+}

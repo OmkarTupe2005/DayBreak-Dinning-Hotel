@@ -1,0 +1,61 @@
+ /* Dining Section Styling */
+ .dining h2 {
+    font-size: 2rem;
+    font-weight: light;
+    margin-bottom: 20px;
+    color: black;
+    margin-top: 50px;
+}
+
+.dining p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.dining img {
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+    border-color: #2f302c;
+}
+
+.dining img:hover {
+    transform: scale(1.05);
+}
+.btn-primary{
+    background-color: #c0c1bd;
+    border-color: #2f302c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+}
+/* Button Animation */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c9c6c1;
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .dining img {
+        margin-bottom: 20px;
+    }
+
+    .text-md-right {
+        text-align: center;
+    }
+
+    .text-md-left {
+        text-align: center;
+    }
+}

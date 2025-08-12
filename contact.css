@@ -1,0 +1,57 @@
+ /* Section Heading */
+ .contact h2 {
+    font-size: 2rem;
+    font-weight: light;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Animations */
+.contact input, .contact textarea {
+    transition: all 0.3s ease-in-out;
+}
+
+.contact input:focus, .contact textarea:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Button Hover Animation */
+.contact button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #cccac8;
+    transform: translateY(-3px);
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    /* Responsive Footer Text Alignment */
+    .text-md-right {
+        text-align: center;
+    }
+
+    .text-md-left {
+        text-align: center;
+    }
+}
+/* Animation for Footer Social Icons */
+        .social-link img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-link:hover img {
+            transform: scale(1.2);
+        }

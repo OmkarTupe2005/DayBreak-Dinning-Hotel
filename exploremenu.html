@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Menu - DayBreak Dining Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="expmenu.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">DayBreak Dining Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dining.html">Dining</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart 
+                            <span id="cart-count" class="badge bg-secondary">0</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h5 class="modal-title" id="successModalLabel">Success!</h5>
+                    <p id="successModalMessage">Item has been added to your cart.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Success Modal for Clear Cart -->
+    <div class="modal fade" id="clearCartModal" tabindex="-1" aria-labelledby="clearCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h5 class="modal-title" id="clearCartModalLabel">Cart Cleared</h5>
+                    <p>Your cart has been successfully cleared.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Clear Cart Modal -->
+    <div class="modal fade" id="clearCartModal" tabindex="-1" aria-labelledby="clearCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h5 class="modal-title" id="clearCartModalLabel">Cart Cleared</h5>
+                    <p>Your cart has been successfully cleared.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dining Menu Section -->
+    <section class="menu-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Dining Menu</h2>
+                <p class="lead">Discover the culinary delights we offer at DayBreak Dining Hotel.</p>
+            </div>
+
+            <!-- Starters -->
+            <div class="row mb-5">
+                <h3 class="mb-4">Starters</h3>
+
+                <!-- Garlic Bread -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Garlic Breads.jpg" class="card-img-top" alt="Garlic Bread">
+                        <div class="card-body">
+                            <h5 class="card-title">Garlic Bread</h5>
+                            <p class="card-text">Crispy garlic bread served with a side of marinara sauce.</p>
+                            <span class="badge bg-primary">₹415.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Garlic Bread" data-price="415.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caesar Salad -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Caesar Salad.jpg" class="card-img-top" alt="Caesar Salad">
+                        <div class="card-body">
+                            <h5 class="card-title">Caesar Salad</h5>
+                            <p class="card-text">Fresh romaine lettuce, croutons, and Caesar dressing.</p>
+                            <span class="badge bg-primary">₹664.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Caesar Salad" data-price="664.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bruschetta -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Bruschetta.jpg" class="card-img-top" alt="Bruschetta">
+                        <div class="card-body">
+                            <h5 class="card-title">Bruschetta</h5>
+                            <p class="card-text">Toasted bread topped with a mix of tomatoes, garlic, and basil.</p>
+                            <span class="badge bg-primary">₹581.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Bruschetta" data-price="581.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="row mb-5">
+                <h3 class="mb-4">Main Courses</h3>
+
+                <!-- Grilled Chicken -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Grilled Chicken.jpg" class="card-img-top" alt="Grilled Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title">Grilled Chicken</h5>
+                            <p class="card-text">Tender grilled chicken breast served with steamed vegetables.</p>
+                            <span class="badge bg-primary">₹1,245.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Grilled Chicken" data-price="1245.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spaghetti Carbonara -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Spaghetti Carbonara.jpg" class="card-img-top" alt="Spaghetti Carbonara">
+                        <div class="card-body">
+                            <h5 class="card-title">Spaghetti Carbonara</h5>
+                            <p class="card-text">Classic Italian pasta with creamy sauce and crispy bacon.</p>
+                            <span class="badge bg-primary">₹996.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Spaghetti Carbonara" data-price="996.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beef Steak -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Beef Steak.jpg" class="card-img-top" alt="Beef Steak">
+                        <div class="card-body">
+                            <h5 class="card-title">Beef Steak</h5>
+                            <p class="card-text">Juicy steak cooked to your preference with a side of fries.</p>
+                            <span class="badge bg-primary">₹1,660.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Beef Steak" data-price="1660.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="row mb-5">
+                <h3 class="mb-4">Desserts</h3>
+
+                <!-- Chocolate Lava Cake -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Chocolate Lava Cake.jpg" class="card-img-top" alt="Chocolate Lava Cake">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Lava Cake</h5>
+                            <p class="card-text">Warm chocolate cake with a gooey center served with vanilla ice cream.</p>
+                            <span class="badge bg-primary">₹498.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Chocolate Lava Cake" data-price="498.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cheesecake -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Cheesecake.jpg" class="card-img-top" alt="Cheesecake">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheesecake</h5>
+                            <p class="card-text">Rich and creamy cheesecake topped with fresh berries.</p>
+                            <span class="badge bg-primary">₹684.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Cheesecake" data-price="684.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiramisu -->
+                <div class="col-md-4 mb-4 menu-item">
+                    <div class="card h-100">
+                        <img src="Tiramisu.jpg" class="card-img-top" alt="Tiramisu">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                            <span class="badge bg-primary">₹598.00</span>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary btn-add" data-name="Tiramisu" data-price="598.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Adding to Cart and Modal -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add to Cart functionality
+        document.querySelectorAll('.btn-add').forEach(button => {
+            button.addEventListener('click', () => {
+                const itemName = button.getAttribute('data-name');
+                const itemPrice = button.getAttribute('data-price');
+
+                // Add item to cart
+                cart.push({ name: itemName, price: parseFloat(itemPrice) });
+                localStorage.setItem('cart', JSON.stringify(cart)); // Update cart in local storage
+
+                // Update cart count
+                updateCartCount();
+
+                // Show success modal for Add to Cart
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+
+                // Auto-hide modal after 1 second
+                setTimeout(() => {
+                    successModal.hide();
+                }, 1000);
+            });
+        });
+
+        // Function to update the cart count
+        function updateCartCount() {
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        // Call updateCartCount on page load to initialize the count
+        updateCartCount();
+
+        // Clear Cart functionality
+        document.getElementById('clear-cart-btn').addEventListener('click', function() {
+            localStorage.removeItem('cart');  // Remove cart data from localStorage
+            cart = [];  // Clear the cart array
+            updateCartCount();  // Reset the cart count badge to 0
+
+            // Show clear cart success modal
+            const clearCartModal = new bootstrap.Modal(document.getElementById('clearCartModal'));
+            clearCartModal.show();
+
+            // Auto-hide modal after 1 second
+            setTimeout(() => {
+                clearCartModal.hide();
+            }, 1000);
+        });
+    </script>
+
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

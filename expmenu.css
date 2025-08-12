@@ -1,0 +1,74 @@
+.h2 {
+    font-size: 2rem;
+    font-weight: light;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Styling for the card images */
+.menu-item img {
+    object-fit: cover;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add-to-cart button styling */
+.btn-add {
+    background-color: #ff9800;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #e68900;
+    transform: translateY(-3px);
+}
+
+/* Responsive Card Layout */
+@media (max-width: 768px) {
+    .menu-item img {
+        height: 150px;
+    }
+}
+    /* Custom Styles */
+    body {
+        background-color: #f9f9f9;
+    }
+    
+    .menu-section {
+        margin-top: 30px;
+    }
+
+    .card {
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-add {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-add:hover {
+        background-color: #0056b3;
+    }
+
+    .cart-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+    }
+
+    .cart-count {
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 5px;
+        font-size: 0.8rem;
+        position: relative;
+        top: -10px;
+        left: -5px;
+    }
